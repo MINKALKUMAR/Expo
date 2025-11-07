@@ -109,6 +109,7 @@ export default function Gallery() {
           filter: brightness(1);
         }
 
+        /* text hidden by default */
         .text-overlay {
           position: absolute;
           bottom: 30px;
@@ -120,13 +121,17 @@ export default function Gallery() {
           text-transform: uppercase;
           text-shadow: 0px 2px 8px rgba(0,0,0,0.8);
           white-space: nowrap;
-          opacity: 1;
+          opacity: 0; /* hidden */
+          visibility: hidden; /* invisible */
           transition: all 0.4s ease;
           letter-spacing: 1px;
         }
 
+        /* show text on hover */
         .segment:hover .text-overlay {
           bottom: 40px;
+          opacity: 1;
+          visibility: visible;
           font-size: 24px;
           text-shadow: 0px 4px 12px rgba(0,0,0,0.9);
         }
@@ -214,5 +219,4 @@ export default function Gallery() {
       `}</style>
     </section>
   );
-  
 }
