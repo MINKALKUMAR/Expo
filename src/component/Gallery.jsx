@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Gallery() {
   const segments = [
-     {
+    {
       title: "ELECTRIC VEHICLES",
       img: "https://revexpo.in/wp-content/uploads/2024/07/ELECTRIC-VEHICLE-1.jpg",
     },
@@ -15,33 +15,32 @@ export default function Gallery() {
       img: "https://www.esi-group.com/sites/default/files/styles/full_width/public/blog_page/4048/EV%20Battery%20Manufacturing.jpg?itok=b_35shXZ",
     },
     {
-   title: "CHARGING INFRA",
-   img: "https://revexpo.in/wp-content/uploads/2024/07/CHARGING-INFRASTRUCTURE.jpg",
- },
-     {
+      title: "CHARGING INFRA",
+      img: "https://revexpo.in/wp-content/uploads/2024/07/CHARGING-INFRASTRUCTURE.jpg",
+    },
+    {
       title: "AUTO COMPONENTS",
       img: "https://revexpo.in/wp-content/uploads/2025/04/DSCF1609-min-scaled.jpg",
     },
-    
-     {
-       title: "ENERGY STORAGE",
-       img: "https://revexpo.in/wp-content/uploads/2024/07/about-expo-img.png",
-     },
-     
-     
-      {
-        title: "Education & Skill Development",
-        img: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Banner.jpg",
-      },
-      {
-        title: "TRANSMISSION",
-        img: "https://revexpo.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-16-at-11.12.18_a2aeff40.webp",
-      },
+    {
+      title: "ENERGY STORAGE",
+      img: "https://revexpo.in/wp-content/uploads/2024/07/about-expo-img.png",
+    },
+    {
+      title: "Education & Skill Development",
+      img: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Banner.jpg",
+    },
+    {
+      title: "TRANSMISSION",
+      img: "https://revexpo.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-16-at-11.12.18_a2aeff40.webp",
+    },
   ];
 
   return (
     <section className="focused-segments">
-      <h1 className="title" style={{fontSize:"2rem"}}>FOCUSED SEGMENTS</h1>
+      <h1 className="title" style={{ fontSize: "2rem" }}>
+        FOCUSED SEGMENTS
+      </h1>
 
       <div className="gallery-container">
         {segments.map((item, index) => (
@@ -120,20 +119,19 @@ export default function Gallery() {
           filter: brightness(1);
         }
 
-        /* improved text styling */
         .text-overlay {
           position: absolute;
           bottom: 25px;
           left: 50%;
           transform: translateX(-50%);
           color: white;
-          font-size: 15px; /* smaller text */
+          font-size: 15px;
           font-weight: 700;
           text-transform: uppercase;
           text-shadow: 0px 2px 8px rgba(0,0,0,0.8);
-          white-space: normal; /* allows wrapping */
+          white-space: normal;
           text-align: center;
-          width: 90%; /* prevent overflow */
+          width: 90%;
           line-height: 1.2;
           opacity: 0;
           visibility: hidden;
@@ -145,7 +143,7 @@ export default function Gallery() {
           bottom: 35px;
           opacity: 1;
           visibility: visible;
-          font-size: 17px; /* slightly bigger on hover */
+          font-size: 17px;
           text-shadow: 0px 4px 12px rgba(0,0,0,0.9);
         }
 
@@ -155,6 +153,7 @@ export default function Gallery() {
           filter: brightness(0.7);
         }
 
+        /* Tablet optimization */
         @media (max-width: 1024px) {
           .gallery-container {
             height: 300px;
@@ -173,68 +172,124 @@ export default function Gallery() {
           }
         }
 
+        /* Mobile optimization - Primary changes here */
         @media (max-width: 768px) {
+          .focused-segments {
+            padding: 40px 0;
+          }
+
           .title {
-            font-size: 22px;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            padding: 0 20px;
           }
           
           .gallery-container {
-            height: 250px;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            overflow-x: auto;
-            padding: 10px 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            height: auto;
+            gap: 12px;
+            padding: 0 16px;
           }
           
           .segment {
-            min-width: 200px;
             height: 200px;
+            min-width: unset;
             flex: none;
+            border-radius: 10px;
           }
-          
+
           .segment:hover {
             flex: none;
-            min-width: 220px;
+            min-width: unset;
+            transform: scale(1.02);
+          }
+
+          .segment img {
+            filter: brightness(0.7);
+          }
+
+          .segment:active img {
+            filter: brightness(0.9);
           }
           
-          .gallery-container:hover .segment:not(:hover) {
-            flex: none;
-            opacity: 1;
-            filter: brightness(0.8);
-          }
-          
+          /* Always show text on mobile */
           .text-overlay {
+            opacity: 1;
+            visibility: visible;
+            bottom: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            width: 85%;
+            line-height: 1.3;
+            letter-spacing: 0.3px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+            padding: 8px 6px;
+            border-radius: 6px;
+          }
+
+          .segment:active .text-overlay {
             font-size: 12px;
             bottom: 18px;
           }
           
-          .segment:hover .text-overlay {
+          /* Remove desktop hover effects on mobile */
+          .gallery-container:hover .segment:not(:hover) {
+            flex: none;
+            opacity: 1;
+            filter: none;
+          }
+        }
+
+        /* Small mobile optimization */
+        @media (max-width: 480px) {
+          .focused-segments {
+            padding: 30px 0;
+          }
+
+          .title {
+            font-size: 1.25rem;
+            margin-bottom: 24px;
+          }
+
+          .gallery-container {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 0 20px;
+          }
+          
+          .segment {
+            height: 220px;
+            border-radius: 12px;
+          }
+
+          .segment:active {
+            transform: scale(0.98);
+          }
+
+          .text-overlay {
             font-size: 13px;
+            bottom: 20px;
+            width: 88%;
+            padding: 10px 8px;
+            line-height: 1.4;
+          }
+
+          .segment:active .text-overlay {
+            font-size: 14px;
             bottom: 22px;
           }
         }
 
-        @media (max-width: 480px) {
-          .gallery-container {
-            height: 200px;
-          }
-          
+        /* Extra small devices */
+        @media (max-width: 360px) {
           .segment {
-            min-width: 150px;
             height: 180px;
           }
-          
-          .segment:hover {
-            min-width: 170px;
-          }
-          
-          .text-overlay {
-            font-size: 11px;
-            width: 95%;
-          }
 
-          .segment:hover .text-overlay {
+          .text-overlay {
             font-size: 12px;
+            padding: 8px 6px;
           }
         }
       `}</style>
