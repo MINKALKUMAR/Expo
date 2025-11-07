@@ -12,6 +12,7 @@ import Stats from './component/Stats'
 import Footer from './component/Footer'
 import Speakers from './component/Speakers'
 import FAQ from './component/FAQ'
+import Gallery from './component/Gallery'
 function App() {
   const [page, setPage] = useState('home')
 
@@ -30,6 +31,7 @@ function App() {
         <About id="about" />
         <WhyAttend id="attend" />
         <MovingStrip id="strip" />
+        <Gallery id="gallery" />
         <Stats id="stats" />
         {/*<Speakers id="speakers" /> */}
         <Categories id="categories" />
