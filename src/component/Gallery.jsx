@@ -214,4 +214,5 @@ export default function Gallery() {
       `}</style>
     </section>
   );
+  
 }
