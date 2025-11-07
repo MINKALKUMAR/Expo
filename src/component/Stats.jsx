@@ -52,6 +52,7 @@ export default function Stats({ id }) {
 
   return (
     <section id={id} className="stats" ref={ref}>
+      <h1 style={{margin:"0",padding:"0",textAlign:"center"}}>Highlights</h1>
       <div className="stats-inner">
         {STATS.map((s, i) => (
           <div key={s.label} className="stat-card">

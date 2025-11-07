@@ -2,30 +2,41 @@ import React from "react";
 
 export default function Gallery() {
   const segments = [
+     {
+      title: "ELECTRIC VEHICLES",
+      img: "https://revexpo.in/wp-content/uploads/2024/07/ELECTRIC-VEHICLE-1.jpg",
+    },
     {
       title: "SOLAR ENERGY",
       img: "https://revexpo.in/wp-content/uploads/2024/07/SOLAR-ENERGY.jpg",
     },
     {
-      title: "TRANSMISSION",
-      img: "https://revexpo.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-16-at-11.12.18_a2aeff40.webp",
+      title: "Manufacturing & Industrial Engineering",
+      img: "https://www.esi-group.com/sites/default/files/styles/full_width/public/blog_page/4048/EV%20Battery%20Manufacturing.jpg?itok=b_35shXZ",
     },
     {
-      title: "CHARGING INFRA",
-      img: "https://revexpo.in/wp-content/uploads/2024/07/CHARGING-INFRASTRUCTURE.jpg",
-    },
-    {
-      title: "ELECTRIC VEHICLES",
-      img: "https://revexpo.in/wp-content/uploads/2024/07/ELECTRIC-VEHICLE-1.jpg",
-    },
-    {
+   title: "CHARGING INFRA",
+   img: "https://revexpo.in/wp-content/uploads/2024/07/CHARGING-INFRASTRUCTURE.jpg",
+ },
+     {
       title: "AUTO COMPONENTS",
       img: "https://revexpo.in/wp-content/uploads/2025/04/DSCF1609-min-scaled.jpg",
     },
-    {
-      title: "ENERGY STORAGE",
-      img: "https://revexpo.in/wp-content/uploads/2024/07/about-expo-img.png",
-    },
+    
+     {
+       title: "ENERGY STORAGE",
+       img: "https://revexpo.in/wp-content/uploads/2024/07/about-expo-img.png",
+     },
+     
+     
+      {
+        title: "Education & Skill Development",
+        img: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Banner.jpg",
+      },
+      {
+        title: "TRANSMISSION",
+        img: "https://revexpo.in/wp-content/uploads/2025/06/WhatsApp-Image-2025-06-16-at-11.12.18_a2aeff40.webp",
+      },
   ];
 
   return (
@@ -53,9 +64,9 @@ export default function Gallery() {
         }
 
         .title {
-          font-size: 36px;
+          font-size: 18px;
           font-weight: 700;
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           color: white;
           margin-bottom: 40px;
           text-transform: uppercase;
@@ -109,34 +120,35 @@ export default function Gallery() {
           filter: brightness(1);
         }
 
-        /* text hidden by default */
+        /* improved text styling */
         .text-overlay {
           position: absolute;
-          bottom: 30px;
+          bottom: 25px;
           left: 50%;
           transform: translateX(-50%);
           color: white;
-          font-size: 20px;
+          font-size: 15px; /* smaller text */
           font-weight: 700;
           text-transform: uppercase;
           text-shadow: 0px 2px 8px rgba(0,0,0,0.8);
-          white-space: nowrap;
-          opacity: 0; /* hidden */
-          visibility: hidden; /* invisible */
+          white-space: normal; /* allows wrapping */
+          text-align: center;
+          width: 90%; /* prevent overflow */
+          line-height: 1.2;
+          opacity: 0;
+          visibility: hidden;
           transition: all 0.4s ease;
-          letter-spacing: 1px;
+          letter-spacing: 0.5px;
         }
 
-        /* show text on hover */
         .segment:hover .text-overlay {
-          bottom: 40px;
+          bottom: 35px;
           opacity: 1;
           visibility: visible;
-          font-size: 24px;
+          font-size: 17px; /* slightly bigger on hover */
           text-shadow: 0px 4px 12px rgba(0,0,0,0.9);
         }
 
-        /* Non-hovered state compression */
         .gallery-container:hover .segment:not(:hover) {
           flex: 0.7;
           opacity: 0.8;
@@ -153,17 +165,17 @@ export default function Gallery() {
           }
           
           .text-overlay {
-            font-size: 16px;
+            font-size: 13px;
           }
           
           .segment:hover .text-overlay {
-            font-size: 20px;
+            font-size: 15px;
           }
         }
 
         @media (max-width: 768px) {
           .title {
-            font-size: 28px;
+            font-size: 22px;
           }
           
           .gallery-container {
@@ -192,13 +204,13 @@ export default function Gallery() {
           }
           
           .text-overlay {
-            font-size: 14px;
-            bottom: 20px;
+            font-size: 12px;
+            bottom: 18px;
           }
           
           .segment:hover .text-overlay {
-            font-size: 16px;
-            bottom: 25px;
+            font-size: 13px;
+            bottom: 22px;
           }
         }
 
@@ -214,6 +226,15 @@ export default function Gallery() {
           
           .segment:hover {
             min-width: 170px;
+          }
+          
+          .text-overlay {
+            font-size: 11px;
+            width: 95%;
+          }
+
+          .segment:hover .text-overlay {
+            font-size: 12px;
           }
         }
       `}</style>

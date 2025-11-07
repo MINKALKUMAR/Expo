@@ -35,7 +35,7 @@ function App() {
         <Stats id="stats" />
         {/*<Speakers id="speakers" /> */}
         <Categories id="categories" />
-        <MediaPartners id="partners" />
+        {/* <MediaPartners id="partners" /> */}
         <EventLocation id="location" />
         <FAQ id="faq" />
       </main>
