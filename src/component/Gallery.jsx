@@ -41,7 +41,7 @@ export default function Gallery() {
 
   return (
     <section className="focused-segments">
-      <h2 className="title">FOCUSED SEGMENTS</h2>
+      <h1 className="title" style={{fontSize:"2rem"}}>FOCUSED SEGMENTS</h1>
 
       <div className="gallery-container">
         {segments.map((item, index) => (
