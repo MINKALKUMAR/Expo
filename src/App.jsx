@@ -13,6 +13,7 @@ import Footer from './component/Footer'
 import Speakers from './component/Speakers'
 import FAQ from './component/FAQ'
 import Gallery from './component/Gallery'
+import AboutOrganizer from './component/AboutOrganizer'
 function App() {
   const [page, setPage] = useState('home')
 
@@ -37,6 +38,7 @@ function App() {
         <Categories id="categories" />
         {/* <MediaPartners id="partners" /> */}
         <EventLocation id="location" />
+        <AboutOrganizer id="organizer" />
         <FAQ id="faq" />
       </main>
       <Footer />
