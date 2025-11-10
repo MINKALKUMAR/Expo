@@ -37,7 +37,7 @@ export default function AboutOrganizer() {
         <div style={styles.descriptionWrapper}>
           <p style={styles.paragraph}>
             <span style={styles.bold}>
-              EVENTAGE TRADE FAIR & EVENTS PVT. LTD.
+              FINTREX MEDIA PVT. LTD.
             </span>{" "}
             is a new generation exhibition company which brings in fresh
             perspectives on opportunity creation through exhibitions. We seek to
