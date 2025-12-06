@@ -3,13 +3,14 @@ import attendBg from '../assets/BGparallex.jpg'
 import attendBg2 from '../assets/BGparallex2.png'  
 
 const items = [
-  'Explore the Latest EV Manufacturing Technologies',
-  'Discover New Business Opportunities',
-  'Connect with Quality Suppliers',
-  'Engage in Ideal Networking Opportunities',
-  'Participate in Community Meet-ups',
-  'Attend Interactive Sessions',
-  'Meet Various EV Industry Experts'
+  'DISCOVER NEW-AGE TECHNOLOGIES',
+  'BUILD HIGH-VALUE BUSINESS CONNECTIONS',
+  'GENERATE QUALIFIED LEADS & BUSINESS DEALS ',
+  'STAY AHEAD OF INDUSTRY TRENDS',
+  'COLLABORATE WITH INDUSTRY & ACADEMIA',
+  'GAIN VISIBILITY & BRAND RECOGNITION',
+  'EXPLORE INVESTMENT & EXPANSION OPPORTUNITIES',
+  'EXPERIENCE A 360° INDUSTRIAL ECOSYSTEM',
 ]
 
 export default function WhyAttend({ id }) {

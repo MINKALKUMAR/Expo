@@ -17,17 +17,7 @@ export default function EventLocation({ id }) {
             title="Event Location Map"
           ></iframe>
         </div>
-
-        <div className="addr-card">
-          {/* ✅ Inline background using imported image */}
-          <div
-            className="addr-image"
-            aria-hidden="true"
-            style={{
-              background: `url(${hotelImage}) center/cover no-repeat`,
-            }}
-          />
-          <div className="addr-content">
+  <div className="addr-content">
             <div className="addr-title">Address</div>
             <div className="addr-text">Muzaffarnagar, Uttar Pradesh</div>
             <a
@@ -39,6 +29,16 @@ export default function EventLocation({ id }) {
               Get Directions
             </a>
           </div>
+        <div className="addr-card">
+          {/* ✅ Inline background using imported image */}
+          <div
+            className="addr-image"
+            aria-hidden="true"
+            style={{
+              background: `url(${hotelImage}) center/cover no-repeat`,
+            }}
+          />
+        
         </div>
       </div>
     </section>

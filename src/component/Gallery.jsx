@@ -12,7 +12,7 @@ export default function Gallery() {
     },
     {
       title: "Manufacturing & Industrial Engineering",
-      img: "https://www.esi-group.com/sites/default/files/styles/full_width/public/blog_page/4048/EV%20Battery%20Manufacturing.jpg?itok=b_35shXZ",
+      img: "https://images.stockcake.com/public/a/4/a/a4a2168d-2bf3-49ba-a518-b2061d92d80e_large/robotic-assembly-line-stockcake.jpg",
     },
     {
       title: "CHARGING INFRA",
