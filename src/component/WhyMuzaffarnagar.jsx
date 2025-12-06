@@ -152,7 +152,7 @@ const WhyMuzaffarnagar = () => {
         .clipped-name{
           position: absolute;
           left: 50%;
-          bottom: clamp(14px, 4vw, 36px);
+          bottom: clamp(14px, 4vw, 0px);
           transform: translateX(-50%);
           z-index: 4;
           width: min(96%, 1400px);

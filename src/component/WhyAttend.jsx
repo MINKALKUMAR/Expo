@@ -1,6 +1,7 @@
 import React from 'react'
 import attendBg from '../assets/BGparallex.jpg'  
-import attendBg2 from '../assets/BGparallex2.png'  
+// import attendBg2 from '../assets/BGparallex2.png'  
+import attendBg2 from '../assets/whitecar.png'  
 
 const items = [
   'DISCOVER NEW-AGE TECHNOLOGIES',
@@ -23,7 +24,7 @@ export default function WhyAttend({ id }) {
       <div className="attend-inner">
         <div className="attend-left"  style={{ backgroundImage: `url(${attendBg2})` }}  aria-hidden="true" />
         <div className="attend-right">
-          <h2 className="attend-title">Why To Attend IIEV Show ?</h2>
+          <h2 className="attend-title">Why To Attend?</h2>
           <div className="attend-rule" />
           <ul className="attend-list">
             {items.map((t, i) => (

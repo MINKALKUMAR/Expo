@@ -16,6 +16,7 @@ import Gallery from './component/Gallery'
 import AboutOrganizer from './component/AboutOrganizer'
 import ExhibitionStall from './component/ExhibitionStall'
 import WhyMuzaffarnagar from './component/WhyMuzaffarnagar'
+import PartnersSection from './component/PartnersSection'
 function App() {
   const [page, setPage] = useState('home')
 
@@ -38,6 +39,7 @@ function App() {
         <Stats id="stats" />
         <ExhibitionStall id="exhibition" />
         <WhyMuzaffarnagar id="why-muzaffarnagar" />
+        <PartnersSection id="partners-section" />
         {/*<Speakers id="speakers" /> */}
         <Categories id="categories" />
         {/* <MediaPartners id="partners" /> */}
