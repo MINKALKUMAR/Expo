@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 const STATS = [
-  { label: 'Exhibitors', value: 150, suffix: '+' },
-  { label: 'Trade Visitors', value: 20000, suffix: '+' },
-  { label: 'Products', value: 200, suffix: '+' },
-  { label: 'Sq Ft Area', value: 50000, suffix: '+' },
+  { label: 'A', value: 150, suffix: '+' },
+  { label: 'B', value: 20000, suffix: '+' },
+  { label: 'C', value: 200, suffix: '+' },
+  { label: 'D', value: 50000, suffix: '+' },
 ]
 
 function useCountUp(trigger) {

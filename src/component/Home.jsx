@@ -33,7 +33,7 @@ function Home({ id }) {
 
           <h2>UTTAR BHARAT UDYOG EXPO 2026</h2>
           <p className="meta">
-            21st - 22nd January, 2026 | Hotel Plasa, Muzaffarnagar, U.P., India
+            11th - 12th February, 2026 | Hotel Plasa, Muzaffarnagar, U.P., India
           </p>
 
           <div className="cta-row">
